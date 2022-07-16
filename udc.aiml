@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <category>
+        <pattern>start</pattern>
+        <template>
+            <image>https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/383-waving-hand-1.svg/1200px-383-waving-hand-1.svg.png</image>
+            Hello!<br /> I am the Computer Science CareerBot. I give advice to students who are close to graduating and begininning their career search.
+            <delay>1</delay>Would you like to learn more?
+            <button>
+                <text>Yes</text>
+                <postback>carousel</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>bye</postback>
+            </button>  
+        </template>
+    </category>
+  
+    <category>
+        <pattern>bye</pattern>
+        <template>Goodbye!<br />Type "start" to start over.</template>
+    </category>
+  
+    <!-- bot hello -->
+    <category>
+        <pattern>carousel</pattern>
+        <template>
+        <delay>2</delay>Here are some of the careers you can begin with a Computer Science degree:<delay>1</delay>
+        <carousel>
+            
+            <card>
+            <title>Technical Writer</title>
+                <subtitle>Median salary: $96,340</subtitle>
+                <image>https://clickhelp.com/images/feeds/blog/2018.06/Trends-for-Technical-Writers.jpg</image>
+            <button>
+                <text>Learn more</text>
+                <postback>technical writer</postback>
+            </button>
+            <button>
+                <text>Help me pick a career</text>
+                <postback>find a career</postback>
+            </button>  
+            </card>
+            
+            <card>
+            <title>Software Developer</title>
+                <subtitle>Median salary: $100,690</subtitle>
+                <image>https://savvycomsoftware.com/wp-content/uploads/2019/07/software-developers-engineer-1.jpg</image>
+            <button>
+                <text>Learn more</text>
+                <postback>software developer</postback>
+            </button>
+            <button>
+                <text>Help me pick a career</text>
+                <postback>find a career</postback>
+            </button>  
+            </card>
+            
+            <card>
+            <title>Web Developer</title>
+                <subtitle>Median salary: $75,073</subtitle>
+                <image>https://www.lehman.edu/academics/continuing-education/images/web-developer-course-nyc-page.jpg</image>
+            <button>
+                <text>Learn more</text>
+                <postback>web developer</postback>
+            </button>
+            <button>
+                <text>Help me pick a career</text>
+                <postback>find a career</postback>
+            </button>  
+            </card>
+            
+            <card>
+            <title>Data Scientist</title>
+                <subtitle>Median salary: $129,000</subtitle>
+                <image>https://www.incimages.com/uploaded_files/image/1920x1080/getty_660952912_363647.jpg</image>
+            <button>
+                <text>Learn more</text>
+                <postback>data scientist</postback>
+            </button>
+            <button>
+                <text>Help me pick a career</text>
+                <postback>find a career</postback>
+            </button>  
+            </card>
+
+            <card>
+            <title>Project Manager</title>
+                <subtitle>Median salary: $73,973</subtitle>
+                <image>https://3ozxuk3equ8uk744atar6415-wpengine.netdna-ssl.com/wp-content/uploads/2017/05/Top-Qualities.jpg</image>
+            <button>
+                <text>Learn more</text>
+                <postback>project manager</postback>
+            </button>
+            <button>
+                <text>Help me pick a career</text>
+                <postback>find a career</postback>
+            </button> 
+            </card>
+            
+        </carousel>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>*</pattern>
+        <template><delay>3</delay>I don't seem to have an answer for that. Type "start" to start over.</template>
+    </category>
+    
+    
+    <!-- learn about career options -->
+    <category>
+        <pattern>software developer</pattern>
+        <template>
+            Software Developer<br />
+            Median salary: $100,690<br />
+            Growth: 22% between 2020 - 2030<br /><br />
+            Software developers retrieve, store, and manipulate data to analyze a system's 
+            capability and requirements. They maintain the design and maintenance of a software system.
+            <button>
+                <text>Is this the right career for me?</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>web developer</pattern>
+        <template>
+            Web Developer<br />
+            Median salary: $75,073<br />
+            Growth: 13% between 2020 - 2030<br /><br />
+            A web developer is a programmer who specializes in the development 
+            of World Wide Web applications using a client–server model. The 
+            applications typically use HTML, CSS and JavaScript in the client.
+            <button>
+                <text>Is this the right career for me?</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>data scientist</pattern>
+        <template>
+            Data Scientist<br />
+            Median salary: $129,000<br />
+            Growth: 22% between 2020 - 2030<br /><br />
+            Data scientists are analytical experts who utilize their skills in 
+            both technology and social science to find trends and manage data. 
+            They use industry knowledge, contextual understanding, and skepticism of 
+            existing assumptions to uncover solutions to business challenges.
+            <button>
+                <text>Is this the right career for me?</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>project manager</pattern>
+        <template>
+            Project Manager<br />
+            Median salary: $73,973<br />
+            Growth: 14% between 2020 - 2030<br /><br />
+            Project managers are responsible for planning, organizing, and 
+            directing the completion of specific projects for an organization 
+            while ensuring these projects are on time, on budget, and within scope.
+            <button>
+                <text>Is this the right career for me?</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>technical writer</pattern>
+        <template>
+            Technical Writer<br />
+            Median salary: $96,340<br />
+            Growth: 12% between 2020 - 2030<br /><br />
+            Technical writers research and create information through a variety 
+            of delivery media (electronic, printed, and audio-visual). Example 
+            types of information include online help, manuals, white papers, 
+            design specifications, project plans and software test plans.
+            <button>
+                <text>Is this the right career for me?</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+
+    <!-- quiz answers -->
+    <category>
+        <pattern>quiz software developer</pattern>
+        <template>
+            <delay>2</delay>
+            I think you should be a<br />
+            Software Developer!<br />
+            Median salary: $77,073<br />
+            Growth: 13% between 2020 - 2030<br /><br />
+            A web developer is a programmer who specializes in the development 
+            of World Wide Web applications using a client–server model. The 
+            applications typically use HTML, CSS and JavaScript in the client.
+            <button>
+                <text>Play again</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>quiz web developer</pattern>
+        <template>
+            <delay>2</delay>
+            I think you should be a<br />
+            Web Developer!<br />
+            Median salary: $75,073<br />
+            Growth: 13% between 2020 - 2030<br /><br />
+            A web developer is a programmer who specializes in the development 
+            of World Wide Web applications using a client–server model. The 
+            applications typically use HTML, CSS and JavaScript in the client.
+            <button>
+                <text>Play again</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>quiz data scientist</pattern>
+        <template>
+            <delay>2</delay>
+            I think you should be a<br />
+            Data Scientist!<br /><br />
+            Median salary: $129,000<br />
+            Growth: 22% between 2020 - 2030<br /><br />
+            Data scientists are analytical experts who utilize their skills in 
+            both technology and social science to find trends and manage data. 
+            They use industry knowledge, contextual understanding, and skepticism of 
+            existing assumptions to uncover solutions to business challenges.
+            <button>
+                <text>Play again</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>quiz project manager</pattern>
+        <template>
+            <delay>2</delay>
+            I think you should be a<br />
+            Project Manager!<br /><br />
+            Median salary: $73,973<br />
+            Growth: 14% between 2020 - 2030<br /><br />
+            Project managers are responsible for planning, organizing, and 
+            directing the completion of specific projects for an organization 
+            while ensuring these projects are on time, on budget, and within scope.
+            <button>
+                <text>Play again</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>quiz technical writer</pattern>
+        <template>
+            <delay>2</delay>
+            I think you should be a<br />
+            Technical Writer!<br /><br />
+            Median salary: $96,340<br />
+            Growth: 12% between 2020 - 2030<br /><br />
+            Technical writers research and create information through a variety 
+            of delivery media (electronic, printed, and audio-visual). Example 
+            types of information include online help, manuals, white papers, 
+            design specifications, project plans and software test plans.
+            <button>
+                <text>Play again</text>
+                <postback>find a career</postback>
+            </button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>quiz UNIQUE</pattern>
+        <template>
+            <delay>2</delay>
+            You have a unique set of skills!<br /><br />
+            I think you should meet with a counselor for a more in-depth assessment<br /><br />
+            Please call to set an appointment.<br />
+        </template>
+    </category>
+    
+    <!-- quiz -->
+    <category>
+        <pattern>find a career</pattern>
+        <template><delay>2</delay>I'll ask you some questions.<delay>1</delay>Do you like math?
+            <button>
+                <text>yes</text>
+                <postback>YESMATH</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>NOMATH</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>NOMATH</pattern>
+        <template><delay>2</delay>Math can go solve it's own problems.<delay>1</delay>Do you like creative design?
+            <button>
+                <text>yes</text>
+                <postback>NOMATHYESDESIGN</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>quiz project manager</postback>
+            </button>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>NOMATHYESDESIGN</pattern>
+        <template><delay>2</delay>Do you enjoy writing code?
+            <button>
+                <text>yes</text>
+                <postback>quiz web developer</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>quiz technical writer</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YESMATH</pattern>
+        <template><delay>2</delay>It's easy as 𝝅.<delay>1</delay>Do you enjoy writing code?
+            <button>
+                <text>yes</text>
+                <postback>YESMATHYESCODE</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>quiz unique</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>YESMATHYESCODE</pattern>
+        <template><delay>2</delay>Do you enjoy creative design?
+            <button>
+                <text>yes</text>
+                <postback>YESMATHYESCODEYESDESIGN</postback>
+            </button>
+            <button>
+                <text>no</text>
+                <postback>quiz data scientist</postback>
+            </button>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>YESMATHYESCODEYESDESIGN</pattern>
+        <template><delay>2</delay>Do you like seeing your completed project, or are you ok with just knowing that it works?
+            <button>
+                <text>Visual</text>
+                <postback>quiz web developer</postback>
+            </button>
+            <button>
+                <text>I'm happy if it just WORKS</text>
+                <postback>quiz software developer</postback>
+            </button>
+        </template>
+    </category>
+    
+</aiml>
+
+
