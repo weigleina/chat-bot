@@ -24,7 +24,7 @@ I modeled a scene that represents the aftermath of a flood, with models to repre
 
 ---
 ## Installation
-1. Download chatBot.zip folder and unzip
+1. Download chat-bot.zip folder and unzip
 2. Open [PandoraBots](https://home.pandorabots.com/)
 3. Click on "Sign In" (top left)
 4. Create a new bot by clicking the + next to MY BOTS
